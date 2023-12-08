@@ -14,11 +14,9 @@
 - https://digital.wildberries.ru/guide
 - https://digital.wildberries.ru/info/contacts
 
-<<<<<<< HEAD
+
 ## Список участников
 Склонировали данный проект:
-- Степанова Камелия 
-=======
-СПИСОК КЛОНИРОВАВШИХ ПРОЕКТ
 1. Кротова Светлана проект клонировала
->>>>>>> eac9cbcd673583cd1dc50576b0f20780094cbddf
+2. Степанова Камелия
+3. Савин Алексей (<saleksey67@gmail.com>)
