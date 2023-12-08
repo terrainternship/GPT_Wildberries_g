@@ -14,4 +14,5 @@
 - https://digital.wildberries.ru/guide
 - https://digital.wildberries.ru/info/contacts
 
-Кротова Светлана проект клонировала
+СПИСОК КЛОНИРОВАВШИХ ПРОЕКТ
+1. Кротова Светлана проект клонировала
