@@ -13,3 +13,7 @@
 - https://digital.wildberries.ru/info/privacy_policy
 - https://digital.wildberries.ru/guide
 - https://digital.wildberries.ru/info/contacts
+
+## Список участников
+Склонировали данный проект:
+- Степанова Камелия В
