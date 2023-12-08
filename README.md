@@ -13,3 +13,7 @@
 - https://digital.wildberries.ru/info/privacy_policy
 - https://digital.wildberries.ru/guide
 - https://digital.wildberries.ru/info/contacts
+
+## Devcontainer
+
+1. Подробнее с работой через Devcontainer можно ознакомиться в официальной документации: 
