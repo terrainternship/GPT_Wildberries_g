@@ -1,7 +1,8 @@
 # GPT_Wildberries_g
 
 ## Техническое задание
-Ссылка на ТЗ: https://docs.google.com/document/d/1amgY9rpmnJg2Kuxa9Hs82FgCakEIx_EwLBql4Ccj4zc/edit?usp=sharing
+Ссылка на ТЗ: 
+https://docs.google.com/document/d/1amgY9rpmnJg2Kuxa9Hs82FgCakEIx_EwLBql4Ccj4zc/edit?usp=sharing
 
 ## База знаний
 Список страниц для сбора данных:
@@ -21,5 +22,6 @@
 2. Степанова Камелия
 3. Савин Алексей (<saleksey67@gmail.com>)
 4. Ткачев Виктор <vic.tkachev@gmail.com> tg: @victk
-5. Заднипрянец Владислав
+5. Заднипрянец Владислав проект клонировал
+
 ========== 
