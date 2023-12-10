@@ -1,5 +1,5 @@
 import os
-from database import get_embedding, create_db_connection
+from backend.service.database import get_embedding, create_db_connection
 
 # test_search.py
 text = "Did anyone adopt a cat this weekend?"
