@@ -24,5 +24,5 @@ https://docs.google.com/document/d/1amgY9rpmnJg2Kuxa9Hs82FgCakEIx_EwLBql4Ccj4zc/
 4. Ткачев Виктор <vic.tkachev@gmail.com> tg: @victk
 5. Заднипрянец Владислав проект клонировал
 6. Шумов Сергей <chat.gpt.shumov@gmail.com>
-7. Калинин А.
+7. Калинин Александр
 ========== 
