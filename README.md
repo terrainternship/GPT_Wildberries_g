@@ -18,11 +18,12 @@ https://docs.google.com/document/d/1amgY9rpmnJg2Kuxa9Hs82FgCakEIx_EwLBql4Ccj4zc/
 
 ## Список участников
 Склонировали данный проект:
-1. Кротова Светлана проект клонировала
+1. Кротова Светлана
 2. Степанова Камелия
-3. Савин Алексей (<saleksey67@gmail.com>)
+3. Савин Алексей <saleksey67@gmail.com>
 4. Ткачев Виктор <vic.tkachev@gmail.com> tg: @victk
-5. Заднипрянец Владислав проект клонировал
+5. Заднипрянец Владислав 
 6. Шумов Сергей <chat.gpt.shumov@gmail.com>
 7. Калинин Александр
+8. Голихин Леонид <korrnals@gmail.com> tg: @golikhin
 ========== 
