@@ -29,4 +29,3 @@ https://docs.google.com/document/d/1amgY9rpmnJg2Kuxa9Hs82FgCakEIx_EwLBql4Ccj4zc/
 9. Кривченко Игорь tg: @moresevas
 10. Бажал Екатерина <ekaterina@bazhal.ru> tg:@prostosrebro
 11. Стригас Евгений <evstrigasai@gmail.com>
-========== 
