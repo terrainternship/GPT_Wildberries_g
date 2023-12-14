@@ -1,6 +1,6 @@
 import os
 import psycopg2
-from backend.service.database import get_embedding, create_db_connection
+from backend.database.database import get_embedding, create_db_connection
 
 # add_test_data.py
 # Write five example sentences that will be converted to embeddings

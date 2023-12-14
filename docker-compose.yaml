@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  # 
+  tgbot:
+    build:
+      context: ./backend/telegram
+      dockerfile: Dockerfile
+    environment:
+      - TOKEN="your-token-here"
+
+
+# volumes:

@@ -61,7 +61,6 @@ async def gpt(update, context):
 def main():
 
     application = Application.builder().token(TOKEN).build()
-    print('Бот запущен...')
 
     application.add_handler(CommandHandler("start", start, block=False))
     application.add_handler(CommandHandler("help", help_command, block=False))
