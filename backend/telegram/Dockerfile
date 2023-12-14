@@ -2,7 +2,10 @@
 FROM python:3.9
 
 # Установка зависимостей
-RUN pip install python-telegram-bot python-dotenv
+RUN pip install python-dotenv
+RUN pip install python-telegram-bot
+
+
 
 # Создание директории приложения внутри контейнера
 WORKDIR /app
