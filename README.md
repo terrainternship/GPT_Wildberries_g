@@ -1,8 +1,11 @@
 # GPT_Wildberries_g
 
+---
+
 ## Техническое задание
-Ссылка на ТЗ:
-https://docs.google.com/document/d/1amgY9rpmnJg2Kuxa9Hs82FgCakEIx_EwLBql4Ccj4zc/edit?usp=sharing
+[Ссылка на ТЗ](https://docs.google.com/document/d/1amgY9rpmnJg2Kuxa9Hs82FgCakEIx_EwLBql4Ccj4zc/edit?usp=sharing)
+
+---
 
 ## База знаний
 Список страниц для сбора данных:
@@ -15,6 +18,10 @@ https://docs.google.com/document/d/1amgY9rpmnJg2Kuxa9Hs82FgCakEIx_EwLBql4Ccj4zc/
 - https://digital.wildberries.ru/guide
 - https://digital.wildberries.ru/info/contacts
 
+---
+## [Таблица для добавления вопросов и тестирования](https://docs.google.com/spreadsheets/d/1yUBr0u9YaYOFxW8FEs1ptm6rCBeSdOmBZkbWZq1y1LI/edit?usp=sharing)
+
+---
 
 ## Список участников
 Склонировали данный проект:
