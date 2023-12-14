@@ -32,3 +32,4 @@ https://docs.google.com/document/d/1amgY9rpmnJg2Kuxa9Hs82FgCakEIx_EwLBql4Ccj4zc/
 12. Минкин Александр
 13. Здвижкова Анна <anvikm@mail.ru> tg:@anvikm
 14. Краснер Алексей <lehakrasner@gmail.com> tg:@krasnerai
+15. Целовальнов Антон <tselovalnov@gmail.com> tg:@tselovalnov
