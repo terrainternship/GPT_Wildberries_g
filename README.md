@@ -1,7 +1,7 @@
 # GPT_Wildberries_g
 
 ## Техническое задание
-Ссылка на ТЗ: 
+Ссылка на ТЗ:
 https://docs.google.com/document/d/1amgY9rpmnJg2Kuxa9Hs82FgCakEIx_EwLBql4Ccj4zc/edit?usp=sharing
 
 ## База знаний
@@ -22,10 +22,11 @@ https://docs.google.com/document/d/1amgY9rpmnJg2Kuxa9Hs82FgCakEIx_EwLBql4Ccj4zc/
 2. Степанова Камелия
 3. Савин Алексей <saleksey67@gmail.com>
 4. Ткачев Виктор <vic.tkachev@gmail.com> tg: @victk
-5. Заднипрянец Владислав 
+5. Заднипрянец Владислав
 6. Шумов Сергей <chat.gpt.shumov@gmail.com>
 7. Калинин Александр
 8. Голихин Леонид <korrnals@gmail.com> tg: @golikhin
 9. Кривченко Игорь tg: @moresevas
 10. Бажал Екатерина <ekaterina@bazhal.ru> tg:@prostosrebro
 11. Стригас Евгений <evstrigasai@gmail.com>
+12. Минкин Александр
