@@ -2,12 +2,19 @@
 
 ## Files
 
-1. Api - text generation rest api
-2. Database - database / vectorestore
-3. Telegram - telegram api 
-4. Voice - text to speeach, speeach to text
+### Backend:
+1. webapi - алгоритм для генерации (возможно захотят мультимодальность и методы доступа к закрытым сервисам)
+2. database - database / vectorestore (база утилиты, функции и методы для работы с бд и из webapi)
+3. telegram - telegram api - внешний интерфейс для демонстрации возможностей
+4. voice - text to speeach, speeach to text - сервис для voice (для webapi алгоритма)
+5. tests - интеграционные тесты и данные для тестирования базы знаний
+
+### Frontend
+1. UI - простое веб-приложение для работы с беком с мобильной / десктопной версткой
 
 ## Dockers
 
-1. All module is rest service with communicatoin between services
+1. Инструкуция о том как полностью собрать контейнер
 2. ...
+
+...
