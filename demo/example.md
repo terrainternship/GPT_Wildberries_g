@@ -12,4 +12,6 @@ int main() {
 ```
 
 ```python
+def main():
+    print('Hi')
 ```
