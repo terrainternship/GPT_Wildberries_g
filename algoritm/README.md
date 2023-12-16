@@ -2,4 +2,4 @@
 ---
 Ссылки на колабы:
 
-https://colab.research.google.com/drive/1PUvJK0OktG5UxGCKd_SF27FPAGdGYy9R?usp=sharing - Колаб с функциями чтения и записи ячеек документа Google Таблицы. Проставлена ссылка на таблицу в которой должны появляться тестоваые вопросы и ответы GPT
+https://colab.research.google.com/drive/1PUvJK0OktG5UxGCKd_SF27FPAGdGYy9R?usp=sharing - Колаб с функциями чтения и записи ячеек документа Google Таблицы. Проставлена ссылка на таблицу в которой должны появляться тестоваые вопросы и ответы GPT.
