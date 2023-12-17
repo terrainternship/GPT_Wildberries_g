@@ -11,7 +11,7 @@ INPUT_PATH = THIS_PATH / 'input'
 OUT_FILE = THIS_PATH / 'output/knowledge_base.md'
 
 
-def build_knowledge(md_file: Path) -> list[str]:
+def process_file(md_file: Path) -> list[str]:
     """
     Построить базу знаний для файла md_file.
     Кажный заголовок будет заменен на полный набор заголовков до самого верхнего.
@@ -23,7 +23,7 @@ def build_knowledge(md_file: Path) -> list[str]:
 
     stack = []  # заголовки от текущего уровня до самого верхнего
 
-    headers_printed = False  # был ли уже выведен заголовок
+    headers_printed = False  # был ли уже выведена начальная секция чанка
 
     for line in text.split('\n'):
         if line.startswith('#'):  # обрабатываем только строки с заголовками
@@ -36,14 +36,28 @@ def build_knowledge(md_file: Path) -> list[str]:
             while stack and level <= stack[-1][0]:
                 stack.pop()
 
-            stack.append((level, line))
+            # текст заголовка - то, что после начальных символов '#'
+            title = line[level:].strip()
+            stack.append((level, title))
 
         else:  # случай строки-не-заголовка
 
-            # выводим цепочку заголовков, если ещё не выводили
+            # выводим начальную секцию будущего чанка (если она не была выведен ранее)
             if not headers_printed:
-                for _, header in stack:
-                    out_lines.append(header)
+                if stack:
+                    # выводим заголовок в формате маркдауна
+                    hashes = '#' * stack[-1][0]
+                    out_lines.append(
+                        f'{hashes} {stack[-1][1]}'
+                    )
+
+                # выводим цепочку заголовков (без '#')
+                for _, title in stack:
+                    out_lines.append(title)
+
+                # выводим разделитель между начальной секцией и остальным текстом
+                out_lines.append('')
+                
                 headers_printed = True
 
             out_lines.append(line)
@@ -51,23 +65,35 @@ def build_knowledge(md_file: Path) -> list[str]:
     return out_lines
 
 
-def main():
+def build_knowledge(md_files, md_file_names):
+    """
+    Построить базу знаний из файлов md_files.
+    """
+    if len(md_files) != len(md_file_names):
+        raise ValueError('Количество файлов и их имен должно совпадать')
+    
     now = dt.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
     out_lines = [
         f'[comment]: # (Этот файл создан {Path(__file__).name}, {now})'
     ]
 
-    for md_file in INPUT_PATH.glob('**/*.md'):
-        fname_str = md_file.relative_to(INPUT_PATH)
+    for i, md_file in enumerate(md_files):
         out_lines.append(
             f'\n'
-            f'[comment]: # ({fname_str})\n'
+            f'[comment]: # ({md_file_names[i]})\n'
         )
-        out_lines += build_knowledge(md_file)
+        out_lines += process_file(md_file)
 
     out_text = '\n'.join(out_lines) + '\n'
     with open(OUT_FILE, 'w', encoding='utf-8') as f:
         f.write(out_text)
+
+
+def main():
+    md_files = list(INPUT_PATH.glob('**/*.md'))
+    md_file_names = [f.relative_to(INPUT_PATH) for f in md_files]
+    
+    build_knowledge(md_files, md_file_names)
 
 
 if __name__ == "__main__":

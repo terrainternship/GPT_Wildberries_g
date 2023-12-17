@@ -51,24 +51,30 @@ def extract_headers(md_file: Path, *, fname_str=None):
     return out_lines    
 
 
-def main():
+def build_toc(md_files, md_file_names):
+    """
+    Построить оглавление из файлов md_files.
+    """
+    if len(md_files) != len(md_file_names):
+        raise ValueError('Количество файлов и их имен должно совпадать')
+    
     now = dt.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
     out_lines = [
-        f'[comment]: # (Этот файл создан {Path(__file__).name}, {now})'
+        f'[comment]: # (Этот файл создан {Path(__file__).name}, {now})\n'
     ]
 
-    for md_file in INPUT_PATH.glob('**/*.md'):
-        fname_str = md_file.relative_to(INPUT_PATH)
-        out_lines.append(
-            f'\n'
-            f'[comment]: # ({fname_str})\n'
-        )
-        # out_lines += extract_headers(md_file, fname_str=fname_str)  # включить в список имя файла
-        out_lines += extract_headers(md_file)
+    for i, md_file in enumerate(md_files):
+        out_lines += extract_headers(md_file, fname_str=md_file_names[i])
 
     out_text = '\n'.join(out_lines) + '\n'
     with open(OUT_FILE, 'w', encoding='utf-8') as f:
         f.write(out_text)
+
+
+def main():
+    md_files = list(INPUT_PATH.glob('**/*.md'))
+    md_file_names = [f.relative_to(INPUT_PATH) for f in md_files]
+    build_toc(md_files, md_file_names)
 
 
 if __name__ == '__main__':
