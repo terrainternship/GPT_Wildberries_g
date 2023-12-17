@@ -1,6 +1,6 @@
 """
 Создает полное оглавление всех файлов *.md в папке input.
-Записывает его в файл output/tocs.md
+Записывает его в файл output/toc.md
 """
 import datetime as dt
 from pathlib import Path
@@ -8,7 +8,7 @@ from pathlib import Path
 
 THIS_PATH = Path(__file__).parent
 INPUT_PATH = THIS_PATH / 'input'
-OUT_FILE = THIS_PATH / 'output/tocs.md'  # table of contents = оглавления
+OUT_FILE = THIS_PATH / 'output/toc.md'  # table of content = оглавление
 
 
 def extract_headers(md_file: Path, *, fname_str=None):

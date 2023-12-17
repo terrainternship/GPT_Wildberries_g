@@ -1,4 +1,4 @@
-[comment]: # (Этот файл создан build_toc.py, 2023-12-17T19:45:42Z)
+[comment]: # (Этот файл создан build_toc.py, 2023-12-17T19:50:14Z)
 
 - info_agreement.md
   - Правила пользования торговой площадкой Wildberries
