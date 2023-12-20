@@ -13,12 +13,12 @@ file8 = open('info_contacts.md', 'r', encoding='utf-8')
 # Читаем содержимое файлов
 file1_content = file1.read()
 file2_content = file2.read()
-file3_content = file1.read()
-file4_content = file2.read()
-file5_content = file1.read()
-file6_content = file2.read()
-file7_content = file1.read()
-file8_content = file2.read()
+file3_content = file3.read()
+file4_content = file4.read()
+file5_content = file5.read()
+file6_content = file6.read()
+file7_content = file7.read()
+file8_content = file8.read()
 # Закрываем файлы
 file1.close()
 file2.close()
@@ -50,7 +50,7 @@ print("Файлы успешно объединены в output.md!")
 # Определение пути к загруженному файлу
 THIS_PATH = Path(__file__).parent
 OUT_DIR = 'outpu'
-OUT_FILE = OUT_DIR + '/knowledge_base.md'
+OUT_FILE = OUT_DIR + '/knowledge_base_new.md'
 
 def process_file(md_file: Path) -> list[str]:
     """
