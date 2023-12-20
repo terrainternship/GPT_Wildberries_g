@@ -22,6 +22,8 @@
 ## [Таблица для добавления вопросов и тестирования](https://docs.google.com/spreadsheets/d/1yUBr0u9YaYOFxW8FEs1ptm6rCBeSdOmBZkbWZq1y1LI/edit?usp=sharing)
 
 ---
+[Колаб для тестирования вопросов и ответов](https://colab.research.google.com/drive/1fOuIqHYk2brpQ8hEGR16w_u_ComJVZJI#scrollTo=5uUavQRgjbkJ)
+---
 
 ## Список участников
 Склонировали данный проект:
