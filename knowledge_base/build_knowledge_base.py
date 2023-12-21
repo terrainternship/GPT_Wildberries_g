@@ -11,55 +11,59 @@ INPUT_PATH = THIS_PATH / 'input'
 OUT_FILE = THIS_PATH / 'output/knowledge_base.md'
 
 
+def header_block(headers) -> list[str]:
+    """
+    Возвращает список строк, которые будем выводить сразу после любого заголовка.
+    """
+    out_lines = []
+
+    if headers:
+        # выводим строку-заголовок в формате маркдауна
+        hashes = '#' * headers[-1][0]
+        out_lines.append(
+            f'{hashes} {headers[-1][1]}'
+        )
+
+    # выводим цепочку заголовков (без '#')
+    for _, title in headers:
+        out_lines.append(title)
+
+    # выводим разделитель между этой секцией и остальным текстом
+    out_lines.append('')
+
+    return out_lines
+
+
 def process_file(md_file: Path) -> list[str]:
     """
     Построить базу знаний для файла md_file.
-    Кажный заголовок будет заменен на полный набор заголовков до самого верхнего.
+    После каждого заголовка будет создан список заголовков до самого верхнего.
+    В виде текста, который пойдет в чанк. 
     """
     with open(md_file, 'r', encoding='utf-8') as f:
         text = f.read()
 
     out_lines = []
 
-    stack = []  # заголовки от текущего уровня до самого верхнего
-
-    headers_printed = False  # был ли уже выведена начальная секция чанка
+    headers = []  # заголовки от текущего уровня до самого верхнего
 
     for line in text.split('\n'):
-        if line.startswith('#'):  # обрабатываем только строки с заголовками
-            headers_printed = False
+        if line.startswith('#'):  # обрабатываем строки с заголовками            
             
             # уровень заголовка = количество символов '#' в начале строки
             level = len(line) - len(line.lstrip('#'))
 
             # оставляем только заголовки выше текущего
-            while stack and level <= stack[-1][0]:
-                stack.pop()
+            while headers and level <= headers[-1][0]:
+                headers.pop()
 
             # текст заголовка - то, что после начальных символов '#'
             title = line[level:].strip()
-            stack.append((level, title))
+            headers.append((level, title))
+
+            out_lines += header_block(headers)
 
         else:  # случай строки-не-заголовка
-
-            # выводим начальную секцию будущего чанка (если она не была выведен ранее)
-            if not headers_printed:
-                if stack:
-                    # выводим заголовок в формате маркдауна
-                    hashes = '#' * stack[-1][0]
-                    out_lines.append(
-                        f'{hashes} {stack[-1][1]}'
-                    )
-
-                # выводим цепочку заголовков (без '#')
-                for _, title in stack:
-                    out_lines.append(title)
-
-                # выводим разделитель между начальной секцией и остальным текстом
-                out_lines.append('')
-                
-                headers_printed = True
-
             out_lines.append(line)
 
     return out_lines
