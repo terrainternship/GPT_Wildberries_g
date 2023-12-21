@@ -41,7 +41,7 @@ def header_block(headers) -> list[str]:
         out_lines.append(header.title)
 
     # выводим разделитель между этой секцией и остальным текстом
-    out_lines.append('')
+    # out_lines.append('')
 
     return out_lines
 
@@ -82,31 +82,43 @@ def process_file(md_file: Path) -> list[str]:
     return out_lines
 
 
-def build_knowledge(md_files, md_file_names):
+def build_knowledge(md_files, md_file_names, *, add_debug=False) -> Path:
     """
     Построить базу знаний из файлов md_files.
+    Возвращает путь к созданному файлу.
     """
     if len(md_files) != len(md_file_names):
         raise ValueError('Количество файлов и их имен должно совпадать')
 
     now = dt.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
-    out_lines = [
-        f'[comment]: # (Этот файл создан {Path(__file__).name}, {now})'
-    ]
+    out_lines = []
+    if add_debug:
+        out_lines = [
+            f'🔵 Этот отладочный файл создан {Path(__file__).name}, {now}'
+        ]
 
     for i, md_file in enumerate(md_files):
-        out_lines.append(
-            f'\n'
-            f'[comment]: # ({md_file_names[i]})\n'
-        )
+        if add_debug:
+            out_lines.append(
+                f'\n'
+                f'🔵 {md_file_names[i]}\n'
+            )
         out_lines += process_file(md_file)
 
     out_text = '\n'.join(out_lines) + '\n'
-    with open(OUT_KNOWLEDGE_FILE, 'w', encoding='utf-8') as f:
+
+    if add_debug:
+        file_path = OUT_KNOWLEDGE_FILE.with_suffix('.debug.md')
+    else:
+        file_path = OUT_KNOWLEDGE_FILE
+
+    with open(file_path, 'w', encoding='utf-8') as f:
         f.write(out_text)
 
+    return file_path
 
-def extract_headers(md_file: Path, *, fname_str=None):
+
+def extract_headers(md_file: Path, *, fname_str=None) -> list[str]:
     """
     Извлекает заголовки из файла md_file и возвращает их в виде списка строк.
     Параметры:
@@ -121,7 +133,7 @@ def extract_headers(md_file: Path, *, fname_str=None):
     if fname_str:
         # добавляем имя файла как первый уровень
         out_lines.append(
-            f'- {fname_str}'
+            f'- 🔵 {fname_str}'
         )
         extra_level = 1
     else:
@@ -146,16 +158,17 @@ def extract_headers(md_file: Path, *, fname_str=None):
     return out_lines
 
 
-def build_toc(md_files, md_file_names):
+def build_toc(md_files, md_file_names) -> Path:
     """
     Построить оглавление из файлов md_files. Полезно для исследования базы знаний.
+    Возвращает путь к созданному файлу.
     """
     if len(md_files) != len(md_file_names):
         raise ValueError('Количество файлов и их имен должно совпадать')
 
     now = dt.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
     out_lines = [
-        f'[comment]: # (Этот файл создан {Path(__file__).name}, {now})\n'
+        f'🔵 Этот файл оглавления создан {Path(__file__).name}, {now}\n'
     ]
 
     for i, md_file in enumerate(md_files):
@@ -164,6 +177,8 @@ def build_toc(md_files, md_file_names):
     out_text = '\n'.join(out_lines) + '\n'
     with open(OUT_TOC_FILE, 'w', encoding='utf-8') as f:
         f.write(out_text)
+
+    return OUT_TOC_FILE
 
 
 def main():
@@ -184,8 +199,14 @@ def main():
     ]
     md_files = [INPUT_PATH / f for f in md_file_names]
 
-    build_knowledge(md_files, md_file_names)
-    build_toc(md_files, md_file_names)
+    fname = build_knowledge(md_files, md_file_names, add_debug=True)
+    print('Создан отладочный файл:   ', fname)
+
+    fname = build_knowledge(md_files, md_file_names)
+    print('Создан файл базы знаний:  ', fname)
+
+    fname = build_toc(md_files, md_file_names)
+    print('Создан файл с оглавлением:', fname)
 
 
 if __name__ == "__main__":
