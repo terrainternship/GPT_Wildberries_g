@@ -22,7 +22,7 @@
 ## [Таблица для добавления вопросов и тестирования](https://colab.research.google.com/drive/1Tboe273zmDWuIiX_noFTsh2h9gf5mHs_?usp=sharing)
 
 ---
-[Колаб для тестирования вопросов и ответов](https://colab.research.google.com/drive/fOuIqHYk2brpQ8hEGR16w_u_ComJVZJI#scrollTo=5uUavQRgjbkJ)
+[Колаб для тестирования вопросов и ответов](https://colab.research.google.com/drive/1Tboe273zmDWuIiX_noFTsh2h9gf5mHs_?usp=sharing)
 ---
 
 ## Список участников
