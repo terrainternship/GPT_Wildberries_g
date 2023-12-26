@@ -23,6 +23,7 @@
 
 ---
 [Колаб для тестирования вопросов и ответов](https://colab.research.google.com/drive/1Tboe273zmDWuIiX_noFTsh2h9gf5mHs_?usp=sharing)
+
 [Колаб для сравнения ответа GPT и эталонного ответа с выставлением оценки] (https://colab.research.google.com/drive/1_x9kuqvr6AE8JNl1ASVWlpJfqSuvd1V5?usp=sharing)
 ---
 
