@@ -7,6 +7,6 @@ https://colab.research.google.com/drive/1PUvJK0OktG5UxGCKd_SF27FPAGdGYy9R?usp=sh
 write_range_to_spreadsheet(sheet_url, sheet_name, column_name, start_row, end_row, values) - запись строк диапазона start_row, end_row зачениями values - список []
 
 Колаб с моделью вопросов и ответов с возможностью отработки по файлу :
-https://colab.research.google.com/drive/1BFyBULp1X5QckIAEkiExrAAddr4lQqap?usp=sharing
+https://colab.research.google.com/drive/1Tboe273zmDWuIiX_noFTsh2h9gf5mHs_?usp=sharing
 
 На основе колаба Минкина Александра добавлена возможность отработки вопросов по диапазону строк файла вопросов, записи ответов модели, использованной модели и чанков.
