@@ -10,3 +10,7 @@ write_range_to_spreadsheet(sheet_url, sheet_name, column_name, start_row, end_ro
 https://colab.research.google.com/drive/1Tboe273zmDWuIiX_noFTsh2h9gf5mHs_?usp=sharing
 
 На основе колаба Минкина Александра добавлена возможность отработки вопросов по диапазону строк файла вопросов, записи ответов модели, использованной модели и чанков.
+
+Колаб для сравнения ответа GPT и эталонного ответа с выставлением оценки по файлу вопросов-ответов :
+https://colab.research.google.com/drive/1_x9kuqvr6AE8JNl1ASVWlpJfqSuvd1V5?usp=sharing
+
