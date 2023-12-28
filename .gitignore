@@ -1,0 +1,7 @@
+.env
+*.zip
+__pycache__
+.DC_Store
+.DS_Store
+.venv/
+.vscode/
