@@ -19,7 +19,7 @@
 - https://digital.wildberries.ru/info/contacts
 
 ---
-## [Таблица для добавления вопросов и тестирования](https://colab.research.google.com/drive/1Tboe273zmDWuIiX_noFTsh2h9gf5mHs_?usp=sharing)
+## [Таблица для добавления вопросов и тестирования](https://docs.google.com/spreadsheets/d/1yUBr0u9YaYOFxW8FEs1ptm6rCBeSdOmBZkbWZq1y1LI/edit#gid=1337456395)
 
 ---
 [Колаб для тестирования вопросов и ответов](https://colab.research.google.com/drive/1Tboe273zmDWuIiX_noFTsh2h9gf5mHs_?usp=sharing)
